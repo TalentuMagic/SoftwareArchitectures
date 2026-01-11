@@ -1,0 +1,45 @@
+## YAML Template.
+---
+model: Toyota Camry
+productionYear: 2025
+
+engineSpecs:
+  displacement: 2499
+  fuel: Petrol
+  noCylinders: 4
+  hasTurbo: false
+  hybrid: true
+  running: false
+
+transmission:
+  type: CVT 6 speed
+  traction: 4x2 - Front wheels
+
+interiorFeatures:
+  diagonalInfotainmentDisplay: 12.3
+  noSpeakers: 8
+  heatedWindscreen: true
+  seats:
+    - material: Leather
+      areHeated: true
+      areElectric: true
+    - material: Leather
+      areHeated: true
+      areElectric: true
+    - material: Leather
+      areHeated: true
+      areElectric: false
+    - material: Leather
+      areHeated: true
+      areElectric: false
+
+safetyFeatures:
+  noAirbags: 9
+  hasFrontParkSensors: true
+  hasBackParkSensors: true
+  hasParkCamera: true
+
+exteriorOptions:
+  colour: Pearl White
+  tyreSize: 235/45 R18
+  wheelRimSize_inch: 18

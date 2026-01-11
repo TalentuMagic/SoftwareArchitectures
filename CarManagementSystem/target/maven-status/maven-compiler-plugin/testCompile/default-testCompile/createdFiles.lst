@@ -1,0 +1,9 @@
+com/fils/carmanagementsystem/car/EngineTest.class
+com/fils/carmanagementsystem/CarManagementSystemTest.class
+com/fils/carmanagementsystem/car/CarTest.class
+com/fils/carmanagementsystem/car/SeatsTest.class
+com/fils/carmanagementsystem/editor/LoaderTest.class
+com/fils/carmanagementsystem/car/SafetyTest.class
+com/fils/carmanagementsystem/car/InteriorTest.class
+com/fils/carmanagementsystem/car/TransmissionTest.class
+com/fils/carmanagementsystem/car/ExteriorTest.class

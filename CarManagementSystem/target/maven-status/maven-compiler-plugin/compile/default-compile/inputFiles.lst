@@ -1,0 +1,10 @@
+/home/davidioans/Documents/Masters/2nd Year/Software Architecture/Assignments/SoftwareArchitectures/CarManagementSystem/src/main/java/com/fils/carmanagementsystem/CarManagementSystem.java
+/home/davidioans/Documents/Masters/2nd Year/Software Architecture/Assignments/SoftwareArchitectures/CarManagementSystem/src/main/java/com/fils/carmanagementsystem/car/Car.java
+/home/davidioans/Documents/Masters/2nd Year/Software Architecture/Assignments/SoftwareArchitectures/CarManagementSystem/src/main/java/com/fils/carmanagementsystem/car/Engine.java
+/home/davidioans/Documents/Masters/2nd Year/Software Architecture/Assignments/SoftwareArchitectures/CarManagementSystem/src/main/java/com/fils/carmanagementsystem/car/Exterior.java
+/home/davidioans/Documents/Masters/2nd Year/Software Architecture/Assignments/SoftwareArchitectures/CarManagementSystem/src/main/java/com/fils/carmanagementsystem/car/Interior.java
+/home/davidioans/Documents/Masters/2nd Year/Software Architecture/Assignments/SoftwareArchitectures/CarManagementSystem/src/main/java/com/fils/carmanagementsystem/car/Safety.java
+/home/davidioans/Documents/Masters/2nd Year/Software Architecture/Assignments/SoftwareArchitectures/CarManagementSystem/src/main/java/com/fils/carmanagementsystem/car/Seats.java
+/home/davidioans/Documents/Masters/2nd Year/Software Architecture/Assignments/SoftwareArchitectures/CarManagementSystem/src/main/java/com/fils/carmanagementsystem/car/StartStop.java
+/home/davidioans/Documents/Masters/2nd Year/Software Architecture/Assignments/SoftwareArchitectures/CarManagementSystem/src/main/java/com/fils/carmanagementsystem/car/Transmission.java
+/home/davidioans/Documents/Masters/2nd Year/Software Architecture/Assignments/SoftwareArchitectures/CarManagementSystem/src/main/java/com/fils/carmanagementsystem/editor/Loader.java
