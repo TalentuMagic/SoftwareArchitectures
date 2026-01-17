@@ -1,4 +1,54 @@
-# Behavioral Design Patterns
+# Run the application & test
+
+## Start the Spring Boot app
+
+```bash
+mvn spring-boot:run
+```
+
+## [Open H2 DB console](http://localhost:8080/h2-console)
+
+JDBC URL: `jdbc:h2:mem:ordersdb`
+Test connection & Connect;
+
+To verify if tables exist, run:
+
+```sql
+SHOW TABLES;
+```
+
+To get data from DB, run:
+
+```sql
+SELECT * FROM ORDERS;
+```
+
+## Place/Delete an Order
+
+To place an order, do:
+
+1. POST @ `http://localhost:8080/api/orders`
+2. Body
+
+````json
+{
+    "customerName": "Sample Name",
+    "totalAmount": 200.0,
+    "paymentMethod": "creditCard"
+}
+```
+[Note] Available Payment Method(s) is/are defined in the `payment` directory as components.
+
+To get all orders/order by ID, do:
+1. GET @ `http://localhost:8080/api/orders`
+2. GET @ `http://localhost:8080/api/orders/{id]}`
+
+To cancel an order, do:
+1. POST @ `http://localhost:8080/api/orders/{id}/cancel`
+
+---
+
+# [Duplicate Behavioral Design Patterns](https://github.com/DianaScurtu/design_patterns/tree/main/behavioral_design_patterns)
 
 Behavioral patterns define how objects interact and communicate with each other. These patterns help create better-managed relationships between objects, promoting flexibility and extensibility in communication.
 
@@ -7,9 +57,11 @@ Behavioral patterns define how objects interact and communicate with each other.
 ### 1. **Chain of Responsibility Design Pattern**
 
 #### Overview
+
 The **Chain of Responsibility** pattern allows a request to pass through a chain of handlers. Each handler can either process the request or pass it to the next handler in the chain.
 
 #### Real-world Usage:
+
 - **Authentication pipelines**: Different authentication checks (like token validation, role verification) can be applied in sequence.
 - **Request validation**: Each handler can validate parts of a request before passing it along to the next handler.
 - **Web Frameworks (e.g., Spring Security)**: In security frameworks like Spring Security, a chain of filters can validate requests by applying authentication, authorization, and validation checks sequentially.
@@ -60,6 +112,7 @@ public class Main {
 ```
 
 ### Practical Considerations:
+
 - **Flexibility**: Handlers are modular and can be added or removed without changing the overall chain structure.
 - **Performance**: Long chains can introduce performance overhead, so limit their length.
 
@@ -68,10 +121,12 @@ public class Main {
 ### 2. **Command Design Pattern**
 
 #### Overview
+
 The **Command** pattern encapsulates a request as an object, allowing you to parameterize clients with queues, requests, and operations, and supporting undoable operations.
 
 #### Real-world Usage:
-- **Undo/redo** actions in applications**: Text editors use the Command pattern to allow reversible actions.
+
+- **Undo/redo** actions in applications\*\*: Text editors use the Command pattern to allow reversible actions.
 - **Task scheduling**: Commands can be scheduled and executed at specific times.
 - **GUI Frameworks (e.g., JavaFX, Swing)**: In GUI applications, button clicks and other user actions are represented as command objects, allowing actions like undo and redo.
 - **Job Scheduling**: Commands represent tasks that can be scheduled to run at specific times (e.g., `Quartz Scheduler` in Java).
@@ -109,6 +164,7 @@ public class Main {
 ```
 
 ### Practical Considerations:
+
 - **History tracking**: Command objects can be stored for undo/redo functionality.
 - **Complexity**: Commands add an extra layer of abstraction that can make code more complex.
 
@@ -117,9 +173,11 @@ public class Main {
 ### 3. **Observer Design Pattern**
 
 #### Overview
+
 The **Observer** pattern allows one object (the subject) to notify other objects (observers) of changes. It’s useful in scenarios where a change in one object requires others to update.
 
 #### Real-world Usage:
+
 - **Event-driven applications**: UI frameworks use observers for components to react to user actions.
 - **Data binding**: Real-time applications with data binding (e.g., dashboards) use observers to update views when data changes.
 - **Event Listeners in GUI Frameworks**: Observers are used for components (buttons, text fields) to listen to user actions and react (e.g., `ActionListener` in Swing).
@@ -170,13 +228,14 @@ public class Main {
         Store store = new Store();
         Observer customer1 = new Customer();
         store.addObserver(customer1);
-        
+
         store.notifyObservers("New product available!");
     }
 }
 ```
 
 ### Practical Considerations:
+
 - **Loose coupling**: Observers and subjects can vary independently.
 - **Performance**: Frequent updates can cause performance issues if there are many observers.
 
@@ -185,9 +244,11 @@ public class Main {
 ### 4. **Strategy Design Pattern**
 
 #### Overview
+
 The **Strategy** pattern allows you to define a family of algorithms, encapsulate them as individual classes, and select one at runtime based on the context.
 
 #### Real-world Usage:
+
 - **Payment systems**: Different payment strategies (credit card, PayPal) can be chosen at runtime.
 - **Sorting algorithms**: Different sorting methods (merge sort, quicksort) can be selected based on data.
 - **Payment Processing Systems (e.g., E-commerce websites)**: Different payment strategies (credit card, PayPal, cryptocurrency) can be selected at checkout.
@@ -234,50 +295,52 @@ This exercise will guide you in implementing several design patterns within an e
 ### Design Patterns to Implement
 
 1. **Chain of Responsibility**:
-   - Set up a chain of handlers for order validation.
-   - Include classes like `InventoryCheckHandler` to handle inventory checks and `PaymentValidationHandler` to validate payments.
+    - Set up a chain of handlers for order validation.
+    - Include classes like `InventoryCheckHandler` to handle inventory checks and `PaymentValidationHandler` to validate payments.
 
 2. **Command**:
-   - Develop commands such as `PlaceOrderCommand` to execute order actions, allowing flexible handling of different order states (e.g., placing, canceling).
+    - Develop commands such as `PlaceOrderCommand` to execute order actions, allowing flexible handling of different order states (e.g., placing, canceling).
 
 3. **Observer**:
-   - Implement a `NotificationService` to notify observers (e.g., `EmailNotification`, `SMSNotification`) whenever an order status changes.
+    - Implement a `NotificationService` to notify observers (e.g., `EmailNotification`, `SMSNotification`) whenever an order status changes.
 
 4. **Strategy**:
-   - Create payment strategies, such as `CreditCardPayment`, and integrate them to support various payment methods.
+    - Create payment strategies, such as `CreditCardPayment`, and integrate them to support various payment methods.
 
 ### Task Breakdown
 
 1. **Refactor the Project as a Spring Boot Application**:
-   - Follow the **layered architecture** structure in Spring Boot, utilizing annotations like `@RestController`, `@Service`, and `@Repository` to separate the layers.
-   - Adjust the `pom.xml` file to include the required Spring Boot, Spring Data JPA, and Lombok dependencies for working with Spring Boot and H2.
+    - Follow the **layered architecture** structure in Spring Boot, utilizing annotations like `@RestController`, `@Service`, and `@Repository` to separate the layers.
+    - Adjust the `pom.xml` file to include the required Spring Boot, Spring Data JPA, and Lombok dependencies for working with Spring Boot and H2.
 
-   #### Spring Boot Layered Architecture
-
-   - **Presentation Layer (Controller Layer)**:
-      - Create RESTful controllers with `@RestController` to manage API endpoints, handling HTTP requests and interacting with the service layer for business logic.
-   - **Service Layer (Business Logic Layer)**:
-      - Use `@Service` classes to implement business logic and coordinate between the controller and repository layers.
-   - **Data Access Layer (Repository Layer)**:
-      - Define repositories with `@Repository` to handle database interactions, using Spring Data JPA for CRUD and custom query support.
-   - **Model Layer (Domain Layer)**:
-      - Define entities using `@Entity` annotations to represent the core structure of the data being processed.
+    #### Spring Boot Layered Architecture
+    - **Presentation Layer (Controller Layer)**:
+        - Create RESTful controllers with `@RestController` to manage API endpoints, handling HTTP requests and interacting with the service layer for business logic.
+    - **Service Layer (Business Logic Layer)**:
+        - Use `@Service` classes to implement business logic and coordinate between the controller and repository layers.
+    - **Data Access Layer (Repository Layer)**:
+        - Define repositories with `@Repository` to handle database interactions, using Spring Data JPA for CRUD and custom query support.
+    - **Model Layer (Domain Layer)**:
+        - Define entities using `@Entity` annotations to represent the core structure of the data being processed.
 
 2. **Implement Persistence with H2 Database**:
-   - Configure an **H2 database** to persist data for testing and development.
-   - Refactor the existing `TODO` comments in the code to save and retrieve data from the H2 database using Spring Data JPA repositories.
+    - Configure an **H2 database** to persist data for testing and development.
+    - Refactor the existing `TODO` comments in the code to save and retrieve data from the H2 database using Spring Data JPA repositories.
 
 3. **Logging System**:
-   - Use `@Slf4j` lombok's annotation to log relevant debug / info messages from your app, instead of `System.out.prinline()` 
+    - Use `@Slf4j` lombok's annotation to log relevant debug / info messages from your app, instead of `System.out.prinline()`
 
 ### Notes
-- **Annotations and Comments**: 
+
+- **Annotations and Comments**:
 
 `TODO` comments are included in the code template to guide you on where to add functionality for each design pattern and to integrate H2 database operations.
-- **Run Configuration**: 
+
+- **Run Configuration**:
 
 Make sure to set up a Spring Boot run configuration for easy application startup and testing. More info [here](https://www.jetbrains.com/help/idea/run-debug-configuration.html#share-configurations).
 
 - **Template**:
 
 You can follow the spring boot template app from `structural_design_patterns` module
+````
