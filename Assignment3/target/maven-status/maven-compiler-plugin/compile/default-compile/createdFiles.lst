@@ -1,0 +1,12 @@
+org/example/structural/dto/BookDto.class
+org/example/structural/service/BaseBookDecorator.class
+org/example/structural/service/FeaturedBookDecorator.class
+org/example/structural/controller/LibraryController.class
+org/example/structural/utils/BookMapper.class
+org/example/structural/repository/BookRepository.class
+org/example/structural/service/BookService.class
+org/example/structural/BookManagementApplication.class
+org/example/structural/service/BestsellerBookDecorator.class
+org/example/structural/service/LibraryFacade.class
+org/example/structural/entity/Book.class
+org/example/structural/service/BookDecorator.class
