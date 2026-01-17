@@ -30,20 +30,23 @@ To place an order, do:
 1. POST @ `http://localhost:8080/api/orders`
 2. Body
 
-````json
+```json
 {
-    "customerName": "Sample Name",
-    "totalAmount": 200.0,
-    "paymentMethod": "creditCard"
+	"customerName": "Sample Name",
+	"totalAmount": 200.0,
+	"paymentMethod": "creditCard"
 }
 ```
+
 [Note] Available Payment Method(s) is/are defined in the `payment` directory as components.
 
 To get all orders/order by ID, do:
+
 1. GET @ `http://localhost:8080/api/orders`
 2. GET @ `http://localhost:8080/api/orders/{id]}`
 
 To cancel an order, do:
+
 1. POST @ `http://localhost:8080/api/orders/{id}/cancel`
 
 ---
@@ -343,4 +346,7 @@ Make sure to set up a Spring Boot run configuration for easy application startup
 - **Template**:
 
 You can follow the spring boot template app from `structural_design_patterns` module
-````
+
+```
+
+```
