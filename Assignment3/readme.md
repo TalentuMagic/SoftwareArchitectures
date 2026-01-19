@@ -1,13 +1,49 @@
-# Structural Design Patterns
+# Run the application & test
+
+## Start the Spring Boot app
+
+```bash
+mvn spring-boot:run
+```
+
+## [Open H2 DB console](http://localhost:8080/h2-console)
+
+JDBC URL: `jdbc:h2:mem:librarydb`
+JDBC Password: `password`
+Test connection & Connect;
+
+To verify if tables exist, run:
+
+```sql
+SHOW TABLES;
+```
+
+To get data from DB, run:
+
+```sql
+SELECT * FROM BOOK;
+```
+
+## Swagger API
+
+To access Swagger and test endpoints, do: `http://localhost:8080/swagger`
+
+Book categories are defined by `LibraryFacade.java`.
+
+---
+
+# [Duplicated from Structural Design Patterns](https://github.com/DianaScurtu/design_patterns/tree/main/structural_design_patterns)
 
 Structural patterns define how objects and classes can be combined to form larger, more flexible structures, enhancing code efficiency and scalability.
 
 ### 1. **Adapter Design Pattern**
 
 #### Overview:
+
 The **Adapter** pattern allows objects with incompatible interfaces to collaborate. It works as a wrapper that translates one interface into another that a client expects.
 
 #### Real-world Usage:
+
 - **Integrating legacy code**: Adapter can help adapt legacy systems to new systems without altering existing code.
 - **Third-party libraries**: When using third-party services that don't match your system's interfaces, Adapter can bridge the gap.
 
@@ -47,6 +83,7 @@ public class Main {
 ```
 
 ### Practical Considerations:
+
 - **Simplicity**: Adapter simplifies using incompatible libraries or legacy code in new applications.
 - **Overhead**: Introduces slight overhead due to additional object creation (Adapter itself).
 - **Flexibility**: Makes integrating third-party services easier without changing existing code.
@@ -56,9 +93,11 @@ public class Main {
 ### 2. **Bridge Design Pattern**
 
 #### Overview:
+
 The **Bridge** pattern decouples an abstraction from its implementation so that both can vary independently. It is used to separate the logic (abstraction) from the actual implementation.
 
 #### Real-world Usage:
+
 - **Cross-platform applications**: Allows developing UIs that work on different platforms like Windows, macOS, or Linux.
 - **Device control systems**: A remote control can operate different devices using the same interface.
 
@@ -102,6 +141,7 @@ public class Main {
 ```
 
 ### Practical Considerations:
+
 - **Decoupling**: Bridge allows you to extend abstraction and implementation independently.
 - **Complexity**: May introduce unnecessary complexity in simpler systems that don’t need such separation.
 
@@ -110,9 +150,11 @@ public class Main {
 ### 3. **Composite Design Pattern**
 
 #### Overview:
+
 The **Composite** pattern lets you treat individual objects and compositions of objects uniformly, creating tree structures to represent part-whole hierarchies.
 
 #### Real-world Usage:
+
 - **File systems**: Files and folders, where both can be treated as components (folders contain files or other folders).
 - **GUI components**: Containers and individual widgets (buttons, text fields) can be treated as a single unit.
 
@@ -148,13 +190,14 @@ public class Main {
     public static void main(String[] args) {
         FileSystemComponent file1 = new File();
         FileSystemComponent folder = new Folder();
-        
+
         folder.display();  // Will recursively display files and subfolders
     }
 }
 ```
 
 ### Practical Considerations:
+
 - **Hierarchy management**: Ideal for managing objects in hierarchical tree structures.
 - **Flexibility**: Easily extendable by adding more leaf or composite classes.
 
@@ -163,9 +206,11 @@ public class Main {
 ### 4. **Decorator Design Pattern**
 
 #### Overview:
+
 The **Decorator** pattern dynamically adds responsibilities to objects without modifying the class. It provides a flexible alternative to subclassing for extending functionality.
 
 #### Real-world Usage:
+
 - **UI widgets**: Adding scrollbars or borders to windows, buttons, or text fields.
 - **File I/O**: Java’s I/O classes use Decorator to add functionality such as buffering, compression, or encryption.
 
@@ -194,7 +239,7 @@ class SMSNotificationDecorator implements Notification {
         wrapped.send(message);   // Original notification
         sendSMS(message);        // Additional SMS functionality
     }
-    
+
     private void sendSMS(String message) { /* Send SMS */ }
 }
 ```
@@ -258,6 +303,7 @@ public class Main {
 ```
 
 ### Practical Considerations:
+
 - **Flexibility**: Adds or modifies behavior at runtime without changing the object’s code.
 - **Overhead**: Can lead to many small objects with decorators stacked together.
 
@@ -266,9 +312,11 @@ public class Main {
 ### 5. **Facade Design Pattern**
 
 #### Overview:
+
 The **Facade** pattern provides a simplified interface to a complex subsystem, making it easier for clients to interact with the system.
 
 #### Real-world Usage:
+
 - **Complex libraries**: A Facade can wrap complex subsystems such as a database or an external API.
 - **Subsystem management**: Simplifies communication with multiple subsystems by hiding the complexity.
 
@@ -299,6 +347,7 @@ public class Main {
 ```
 
 ### Practical Considerations:
+
 - **Simplicity**: Makes complex subsystems easier to use with minimal exposure to the underlying complexity.
 - **Tight coupling**: Facades may tightly couple clients to specific subsystems.
 
@@ -307,9 +356,11 @@ public class Main {
 ### 6. **Flyweight Design Pattern**
 
 #### Overview:
+
 The **Flyweight** pattern minimizes memory usage by sharing as much data as possible with other similar objects. It is primarily used to reduce the number of objects created.
 
 #### Real-world Usage:
+
 - **Graphic editors**: Objects like shapes or icons that appear in large numbers can share common properties (e.g., color, texture).
 - **Text editors**: Characters in documents can share common formatting information (font, size).
 
@@ -351,6 +402,7 @@ public class Main {
 ```
 
 ### Practical Considerations:
+
 - **Memory efficiency**: Greatly reduces memory usage when dealing with large numbers of similar objects.
 - **Complexity**: The flyweight approach adds complexity by separating shared and unique states.
 
@@ -359,9 +411,11 @@ public class Main {
 ### 7. **Proxy Design Pattern**
 
 #### Overview:
+
 The **Proxy** pattern provides a surrogate or placeholder object to control access to another object. It is commonly used for lazy initialization, access control, or logging.
 
 #### Real-world Usage:
+
 - **Remote proxies**: Manage communication between a client and a remote object.
 - **Virtual proxies**: Delay the creation of an expensive object until it's needed.
 
@@ -409,6 +463,7 @@ public class Main {
 ```
 
 ### Practical Considerations:
+
 - **Resource management**: Controls access to heavy or resource-consuming objects.
 - **Lazy loading**: Delays expensive operations until they're actually needed, optimizing performance.
 
@@ -466,7 +521,7 @@ public class UserController {
 }
 ```
 
------
+---
 
 # Design Patterns Exercise
 
@@ -475,6 +530,7 @@ This project requires you to implement several structural and creational design 
 ## Exercise Requirements
 
 ### Scenario
+
 You are tasked with creating a **Book Management System** for a library using Spring Boot. The system needs to handle adding, updating, and retrieving books from a database.
 
 ### Requirements
@@ -492,17 +548,18 @@ You are tasked with creating a **Book Management System** for a library using Sp
     - **TODO**: Define methods in these layers for book data management.
 
 4. **H2 Database Configuration**:
-   - Configure H2 in-memory database with sample data for testing.
-   - **RUN CONFIGURATION**: Use the IntelliJ run configuration to start the Spring Boot application. 
-   - use java 17, Amazon Coretto (File/Project Structure/ sdk dropdown/ download java 17-Amazon Coretto)
-   - Acess [Swagger UI](http://localhost:8080/swagger-ui/index.html)
-   - Access [h2 console](http://localhost:8080/h2-console)
-     ```
-     Driver Class: org.h2.Driver
-     JDBC URL: jdbc:h2:mem:librarydb
-     User Name: sa
-     Password: password
-     ```
+    - Configure H2 in-memory database with sample data for testing.
+    - **RUN CONFIGURATION**: Use the IntelliJ run configuration to start the Spring Boot application.
+    - use java 17, Amazon Coretto (File/Project Structure/ sdk dropdown/ download java 17-Amazon Coretto)
+    - Acess [Swagger UI](http://localhost:8080/swagger-ui/index.html)
+    - Access [h2 console](http://localhost:8080/h2-console)
+        ```
+        Driver Class: org.h2.Driver
+        JDBC URL: jdbc:h2:mem:librarydb
+        User Name: sa
+        Password: password
+        ```
 
 ## Instructions
+
 Complete the `TODO` sections in each file to finalize the solution.
