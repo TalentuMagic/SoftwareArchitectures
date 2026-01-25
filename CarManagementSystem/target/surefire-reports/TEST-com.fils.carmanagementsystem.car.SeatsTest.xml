@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.fils.carmanagementsystem.car.SeatsTest" time="0.019" tests="2" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.fils.carmanagementsystem.car.SeatsTest" time="0.024" tests="2" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -12,7 +12,7 @@
     <property name="java.vm.specification.version" value="21"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-21-openjdk-amd64/lib"/>
-    <property name="sun.java.command" value="/home/davidioans/projects/SoftwareArchitectures/CarManagementSystem/target/surefire/surefirebooter-20260119125337399_3.jar /home/davidioans/projects/SoftwareArchitectures/CarManagementSystem/target/surefire 2026-01-19T12-53-37_259-jvmRun1 surefire-20260119125337399_1tmp surefire_0-20260119125337399_2tmp"/>
+    <property name="sun.java.command" value="/home/davidioans/projects/SoftwareArchitectures/CarManagementSystem/target/surefire/surefirebooter-20260119133729423_3.jar /home/davidioans/projects/SoftwareArchitectures/CarManagementSystem/target/surefire 2026-01-19T13-37-29_252-jvmRun1 surefire-20260119133729423_1tmp surefire_0-20260119133729423_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/home/davidioans/projects/SoftwareArchitectures/CarManagementSystem/target/test-classes:/home/davidioans/projects/SoftwareArchitectures/CarManagementSystem/target/classes:/home/davidioans/.m2/repository/org/projectlombok/lombok/1.18.42/lombok-1.18.42.jar:/home/davidioans/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.16.1/jackson-databind-2.16.1.jar:/home/davidioans/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.16.1/jackson-annotations-2.16.1.jar:/home/davidioans/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.16.1/jackson-core-2.16.1.jar:/home/davidioans/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-yaml/2.16.1/jackson-dataformat-yaml-2.16.1.jar:/home/davidioans/.m2/repository/org/yaml/snakeyaml/2.2/snakeyaml-2.2.jar:/home/davidioans/.m2/repository/org/junit/jupiter/junit-jupiter-api/6.0.1/junit-jupiter-api-6.0.1.jar:/home/davidioans/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/home/davidioans/.m2/repository/org/junit/platform/junit-platform-commons/6.0.1/junit-platform-commons-6.0.1.jar:/home/davidioans/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/davidioans/.m2/repository/org/jspecify/jspecify/1.0.0/jspecify-1.0.0.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -27,7 +27,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
-    <property name="surefire.real.class.path" value="/home/davidioans/projects/SoftwareArchitectures/CarManagementSystem/target/surefire/surefirebooter-20260119125337399_3.jar"/>
+    <property name="surefire.real.class.path" value="/home/davidioans/projects/SoftwareArchitectures/CarManagementSystem/target/surefire/surefirebooter-20260119133729423_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="21.0.9+10-Ubuntu-124.04"/>
     <property name="user.name" value="davidioans"/>
@@ -53,6 +53,6 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="setters_and_equals_hashCode_work" classname="com.fils.carmanagementsystem.car.SeatsTest" time="0.014"/>
-  <testcase name="constructor_and_getters_work" classname="com.fils.carmanagementsystem.car.SeatsTest" time="0.002"/>
+  <testcase name="setters_and_equals_hashCode_work" classname="com.fils.carmanagementsystem.car.SeatsTest" time="0.012"/>
+  <testcase name="constructor_and_getters_work" classname="com.fils.carmanagementsystem.car.SeatsTest" time="0.003"/>
 </testsuite>

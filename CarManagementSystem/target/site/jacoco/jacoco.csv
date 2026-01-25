@@ -1,0 +1,7 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+CarManagementSystem,com.fils.carmanagementsystem,CarManagementSystem,9,97,0,0,4,14,1,1,1,1
+CarManagementSystem,com.fils.carmanagementsystem.car,Transmission,0,6,0,0,0,1,0,1,0,1
+CarManagementSystem,com.fils.carmanagementsystem.car,Engine,0,51,0,2,0,6,0,3,0,2
+CarManagementSystem,com.fils.carmanagementsystem.car,Car,0,31,0,0,0,2,0,1,0,1
+CarManagementSystem,com.fils.carmanagementsystem.car,Exterior,0,21,0,0,0,2,0,1,0,1
+CarManagementSystem,com.fils.carmanagementsystem.editor,Loader,3,25,0,0,1,4,1,2,1,2
