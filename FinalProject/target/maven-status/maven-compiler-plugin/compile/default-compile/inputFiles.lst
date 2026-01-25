@@ -1,0 +1,12 @@
+/home/davidioans/projects/SoftwareArchitectures/Assignment3/src/main/java/org/example/structural/BookManagementApplication.java
+/home/davidioans/projects/SoftwareArchitectures/Assignment3/src/main/java/org/example/structural/controller/LibraryController.java
+/home/davidioans/projects/SoftwareArchitectures/Assignment3/src/main/java/org/example/structural/dto/BookDto.java
+/home/davidioans/projects/SoftwareArchitectures/Assignment3/src/main/java/org/example/structural/entity/Book.java
+/home/davidioans/projects/SoftwareArchitectures/Assignment3/src/main/java/org/example/structural/repository/BookRepository.java
+/home/davidioans/projects/SoftwareArchitectures/Assignment3/src/main/java/org/example/structural/service/BaseBookDecorator.java
+/home/davidioans/projects/SoftwareArchitectures/Assignment3/src/main/java/org/example/structural/service/BestsellerBookDecorator.java
+/home/davidioans/projects/SoftwareArchitectures/Assignment3/src/main/java/org/example/structural/service/BookDecorator.java
+/home/davidioans/projects/SoftwareArchitectures/Assignment3/src/main/java/org/example/structural/service/BookService.java
+/home/davidioans/projects/SoftwareArchitectures/Assignment3/src/main/java/org/example/structural/service/FeaturedBookDecorator.java
+/home/davidioans/projects/SoftwareArchitectures/Assignment3/src/main/java/org/example/structural/service/LibraryFacade.java
+/home/davidioans/projects/SoftwareArchitectures/Assignment3/src/main/java/org/example/structural/utils/BookMapper.java
